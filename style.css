@@ -1,0 +1,48 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: blue;
+    color: rgb(255, 255, 255);
+    padding: 1px;
+    text-align: left;
+    padding-left: 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    background-color: blue;
+    padding: 5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #b3afaf;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
