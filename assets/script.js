@@ -1,3 +1,4 @@
+// Função para criar a seção "Institucional", "Menu" e "Endereço" em um elemento "article"
 function criarArticle() {
     var article = document.createElement('article');
 
@@ -37,6 +38,7 @@ function criarArticle() {
     return article;
 }
 
+// Função para criar o menu de navegação
 function criarMenu() {
     var menu = document.createElement('nav');
     menu.className = "nav-home";
@@ -50,32 +52,37 @@ function criarMenu() {
     return menu;
 }
 
+// Função para criar o rodapé
 function criarRodape() {
     var rodape = document.createElement('footer');
     rodape.innerHTML = "<p>© Bigotur Transporte e Turismo LTDA</p>";
     return rodape;
 }
 
+// Evento DOMContentLoaded para garantir que o DOM está pronto antes de executar o script
 document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll(".carousel-img");
     let currentImage = 0;
 
+    // Função para trocar a imagem no carrossel
     function changeImage(direction) {
-      images[currentImage].classList.remove("active");
-  
-      currentImage += direction;
-      if (currentImage < 0) {
-        currentImage = images.length - 1;
-      } else if (currentImage >= images.length) {
-        currentImage = 0;
-      }
-  
-      images[currentImage].classList.add("active");
+        images[currentImage].classList.remove("active");
+
+        currentImage += direction;
+        if (currentImage < 0) {
+            currentImage = images.length - 1;
+        } else if (currentImage >= images.length) {
+            currentImage = 0;
+        }
+
+        images[currentImage].classList.add("active");
     }
 
+    // Função para avançar automaticamente as imagens a cada 4,5 segundos
     function auto() {
-      changeImage(1);
+        changeImage(1);
     }
 
+    // Configura um intervalo para a função auto()
     setInterval(auto, 4500);
 });
